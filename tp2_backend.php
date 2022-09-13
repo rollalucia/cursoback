@@ -34,7 +34,7 @@ if ($numero < 2 || $numero > 10 ) {
 
 <h1>Ejercicio 4</h1>
 <?php 
-$numero1 = 20;
+$numero1 = 10;
 $numero2 = 20;
 
 if ($numero1 > $numero2) {
