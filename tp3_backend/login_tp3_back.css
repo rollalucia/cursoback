@@ -1,0 +1,33 @@
+body {
+    background-image: url(img/fondo-gatitos.jpg);
+    background-size: cover;
+    height: 100vh;
+    
+  
+}
+main {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+input  {
+    font-size: 20px;
+    font-weight: 500;
+}
+label {
+    font-size: 30px;
+    color: rgb(214, 21, 21);
+    font-weight: 600;
+}
+.test {
+    align-items: start;
+    font-size: 40px;
+}
