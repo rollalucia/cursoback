@@ -85,9 +85,8 @@
             <td>Talle</td>
             <td>Precio</td>
         </tr>
-    </table>
     <?php 
-    $consulta = "SELECT * FROM `ropa` WHERE `marca` = `nike`"
+    $consulta = "SELECT * FROM `ropa` WHERE `marca` = 'nike'" ;
     $datos = mysqli_query($conexion, $consulta);
 
 
@@ -113,9 +112,9 @@
             <td>Talle</td>
             <td>Precio</td>
         </tr>
-    </table>
+    
     <?php 
-    $consulta = "SELECT * FROM `ropa` WHERE `precio` > 500"
+    $consulta = "SELECT * FROM `ropa` WHERE `precio` > 500" ;
     $datos = mysqli_query($conexion, $consulta);
 
 
