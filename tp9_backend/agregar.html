@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Agregar productos</h1>
+    <form method="POST" action="agregar.php" enctype="multipart/form-data">
+        <label>Tipo de Prenda</label>
+        <input type="text" name="prenda" placeholder="Prenda"  required>
+        <label >Marca</label>
+        <input type="text" name="marca" placeholder="Marca"  required>
+        <label for="">Talle</label>
+        <input type="text" name="talle" placeholder="Talle"  required>
+        <label for="">Precio</label>
+        <input type="text" name="precio" placeholder="Precio" required >
+        <label for="">Imagen</label>
+        <input type="file" name="imagen" placeholder="Imagen" >
+        <input type="submit" value="Ingresar">
+    </form>
+</body>
