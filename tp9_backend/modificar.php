@@ -31,19 +31,23 @@ $datos = mysqli_fetch_array($respuesta);
     $marca = $datos["marca"];
     $talle = $datos["talle"];
     $precio = $datos["precio"];
+    $imagen = $datos["imagen"];
     ?>
 
     <h2>Modificar producto</h2>
     <p>Ingrese los nuevos datos de la prenda</p>
     <form action="" method="POST" enctype="multipart/form-data">
         <label for="">Prenda</label>
-        <input type="text" name="prenda" placeholder="Prenda" id="" value="<?php echo $prenda?>">
+        <input type="text" name="prenda" placeholder="Prenda" id="" value="<?php echo $prenda ?>">
         <label for="">Marca</label>
-        <input type="text" name="marca" placeholder="Marca" id="" value="<?php echo $marca?>">
+        <input type="text" name="marca" placeholder="Marca" id="" value="<?php echo $marca ?>">
         <label for="">Talle</label>
-        <input type="text" name="talle" placeholder="Talle" id="" value="<?php echo $talle?>">
+        <input type="text" name="talle" placeholder="Talle" id="" value="<?php echo $talle ?>">
         <label for="">Precio</label>
-        <input type="text" name="precio" placeholder="Precio" id="" value="<?php echo $precio?>">
+        <input type="text" name="precio" placeholder="Precio" id="" value="<?php echo $precio ?>">
+        <label>Imagen</label>
+        <input type="file" name="imagen" placeholder="imagen">
+
         <input type="submit" name="guardar_cambios" value="Guardar Cambios">
         <button type="submit" name="Cancelar" formaction="index.html">Cancelar</button>
 
@@ -59,10 +63,10 @@ $datos = mysqli_fetch_array($respuesta);
         $marca = $_POST['marca'];
         $talle = $_POST['talle'];
         $precio = $_POST['precio'];
-        // $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
+        $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 
         // Preparamos la orden
-        $consulta = "UPDATE ropa SET prenda='$prenda', marca='$marca', talle ='$talle', precio='$precio'";
+        $consulta = "UPDATE ropa SET prenda='$prenda', marca='$marca', talle ='$talle', precio='$precio', imagen='$imagen' WHERE id=$id";
 
         // Ejecutar orden 
         mysqli_query($conexion, $consulta);

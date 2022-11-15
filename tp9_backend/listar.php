@@ -9,11 +9,8 @@
 </head>
 
 <body>
-    <h1>Tienda de Ropa</h1>
-    <!-- Botón para listar  -->
-    <form action="listar.php" method="post">
-        <button type="submit">Listar</button>
-    </form>
+<a href="index.html"><h1>Tienda de Ropa</h1></a>
+  
     <div style="display: flex; gap: 1rem;">
     <?php
     $conexion = mysqli_connect("127.0.0.1", "root", "", "tiendaderopa");
@@ -26,6 +23,7 @@
         echo "<h3>{$fila['prenda']} {$fila['marca']}</h3>" ;
         echo  "<p>Talle {$fila['talle']}</p>" ;
         echo "<p> \${$fila['precio']}" ;
+        echo '<img src="data:image/png; base64,'. base64_encode($fila['imagen']).'" alt="" width="100%">';
         echo "<a href='modificar.php?id={$fila['id']}'>Editar</a>" ;
         echo "<a href='eliminar.php?id={$fila['id']}'>Eliminar</a>" ;
         echo '</div>'; 
